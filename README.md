@@ -19,7 +19,7 @@ original file, `AMillionRandomDigits.bin`. To decompress the compressed files,
 run the following command on a linux box (works on mac as well). Sorry, no
 windows support right now, although it isn't too hard to do.
 ```
-decompressor --source compressed_data --target AMillionRandomDigits.bin
+docker run --rm -v $(pwd):/code alpine /code/decompressor --source /code/compressed_data --target AMillionRandomDigits.bin
 ```
 
 Once the decompressed file is created, you can verify it has the correct size
